@@ -202,8 +202,10 @@ body.light .faq-item p{color:#5b554d}
   .header-cta{gap:8px}
 }
 @media(max-width:420px){
-  .lang-switch{display:none}
   .header-inner{gap:8px}
+  .logo img{height:20px}
+  .lang-switch a{padding:5px 9px;font-size:.66rem}
+  .btn-sm{padding:9px 13px;font-size:.66rem}
 }
 @media(max-width:640px){
   .contact-form .row2{grid-template-columns:1fr}
