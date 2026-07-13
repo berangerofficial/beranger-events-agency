@@ -35,7 +35,7 @@ img{max-width:100%;display:block}
 .hero-video{position:relative;height:100svh;min-height:600px;overflow:hidden;display:flex;align-items:flex-end;background-size:cover;background-position:center 22%}
 .hero-video.short{height:80svh;min-height:520px}
 .hero-bg{position:absolute;inset:0;overflow:hidden;z-index:0}
-.hero-bg iframe{position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:100%;min-width:177.78vh;transform:translate(-50%,-50%);pointer-events:none;border:0}
+.hero-bg iframe{position:absolute;top:50%;left:50%;width:100vw!important;height:56.25vw!important;min-height:100%!important;min-width:177.78vh!important;transform:translate(-50%,-50%);pointer-events:none;border:0}
 .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.12) 45%,rgba(0,0,0,.88) 100%)}
 .hero-content{position:relative;z-index:2;width:100%;padding-bottom:66px}
 .hero-content h1{max-width:16ch;text-shadow:0 2px 34px rgba(0,0,0,.55)}
@@ -187,6 +187,11 @@ body.light .compare .no{color:#a49e95}
 .faq-item p{margin:0;color:var(--muted)}
 body.light .faq-item p{color:#5b554d}
 
+/* opaque header on mobile - removes hairline/seam over hero video */
+@media(max-width:860px){
+  .site-header,.site-header.solid{background:#000;-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom:0}
+  body.light .site-header,body.light .site-header.solid{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom:0}
+}
 /* ===== MOBILE ===== */
 @media(max-width:860px){
   .nav-toggle{display:block}
